@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)button:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)save:(id)sender;
 
 
 @end
