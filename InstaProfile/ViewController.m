@@ -32,8 +32,8 @@
         @finally {
                     NSLog(scanString);
             dispatch_async(dispatch_get_main_queue(), ^{
-                _imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:scanString]]];
-            });
+                NSString *finalStr = [scanString stringByReplacingOccurrencesOfString:@"s320x320/" withString:@""];
+                _imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:finalStr]]];            });
         }
         
     }
